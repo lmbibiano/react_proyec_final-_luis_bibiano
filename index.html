@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="./img/logo-arom.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arom Aguilar l proyecto</title>
+</head>
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid nave">
+          <a class="navbar-brand" href="#"><img class="logo" src="./img/logo-arom.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active-navbar" aria-current="page" href="#">INICIO</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 ESTILOS
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Clasica</a></li>
+                  <li><a class="dropdown-item" href="#">Custom</a></li>
+                  <li><a class="dropdown-item" href="#">Racing</a></li>
+                  <li><a class="dropdown-item" href="#">Enduro</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Scooter</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  MARCAS
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#kawasaki">Kawasaki</a></li>
+                  <li><a class="dropdown-item" href="#honda">Honda</a></li>
+                  <li><a class="dropdown-item" href="#yamaha">Yamaha</a></li>
+                  <li><a class="dropdown-item" href="#ktm">KTM</a></li>
+                  <li><a class="dropdown-item" href="#suzuki">Suzuki</a></li>
+                  <li><a class="dropdown-item" href="#gilera">Gilera</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#gilera">PROMO</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#tienda">TIENDA</a>
+              </li>
+              
+            </ul>
+            <div class="carrito-container">
+              <button id="toggleCarrito"><i class="bi bi-cart"></i></button>
+              <div id="carrito" class="carrito">
+                <p>Carrito</p>
+                <!---- Aquí se mostrarán los productos del carrito --------->
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+    </header>
+    <main>
+        <img src="./img/fondo.jpeg" class="fondo" alt="">
+        <img class="logo1" src="./img/logo-arom.png" alt="">
+        <img src="./img/marca8.png" class="objeto" data-value="-5" alt="">
+        <img src="./img/marca7.png" class="objeto" data-value="-2" alt="">
+        <img src="./img/marca6.png" class="objeto" data-value="6" alt="">
+        <img src="./img/marca5.png" class="objeto" data-value="4" alt="">
+        <img src="./img/marca4.png" class="objeto" data-value="-6" alt="">
+        <img src="./img/marca3.png" class="objeto" data-value="8" alt="">
+        <img src="./img/marca2.png" class="objeto" data-value="-4" alt="">
+        <img src="./img/marca1.png" class="objeto" data-value="5" alt="">
+    </main>
+    <section class="categorias-destacadas section1">
+      <div class=" cat clasicas "><h4 class="clasic">Clasicas</h4> <img id="imagenZoom" src="./img/clasica.jpg" class="fotofoto" alt=""> </div>
+      <div class=" cat auto"><h4>Custom</h4><img id="imagenZoom" src="./img/custom.jpg" class="fotofoto" alt=""></div>
+      <div class=" cat fast"><h4>Racing</h4><img id="imagenZoom" src="./img/racing.jpg" class="fotofoto" alt=""></div>
+      <div class=" cat medicinal"><h4>Enduro</h4><img id="imagenZoom" src="./img/enduro.jpg" class="fotofoto" alt=""></div>
+      <div class=" cat promo"><img id="imagenZoom" src="./img/scooter.jpg" class="fotofoto" alt=""><h4>Scooter</h4></div>
+    </section>
+    <section class="mas-vendidas section2">
+      <img src="./img/fondo mas vendidas.webp" class="fondo" alt="">
+      <h2 class="titulo-mv">Las Mas vendidas</h2>
+      
+        <div class="contenedor">
+            
+            <div class="card" >
+              <figure>
+                <img src="./img/duke 390.webp" class="card-img-top" alt="...">
+                <div class="capa">
+                  <div class="detalles"><h6>Cilindrada:</h6><p>249 cc</p></div>
+                  <div class="detalles"><h6>Velocidad máxima:</h6><p>140 km/h</p></div>
+                  <div class="detalles"><h6>Alimentación:</h6><p>Inyección</p></div>
+                  <div class="detalles"><h6>Transmisión:</h6><p>6 velocidades</p></div>
+                </div>
+              </figure>
+                <div class="card-body">
+                  <h5 class="card-title">Duke 390</h5>
+                  <p class="card-text año-km">2023 | 0km</p>
+                  <p class="card-text precio"> U$S 9.900</p>
+                </div>
+            </div>
+            <div class="card">
+              <figure>
+                <img src="./img/fz 150.webp" class="card-img-top" alt="...">
+                <div class="capa">
+                  <div class="detalles"><h6>Cilindrada:</h6><p>149 cc</p></div>
+                  <div class="detalles"><h6>Velocidad máxima:</h6><p>115 km/h</p></div>
+                  <div class="detalles"><h6>Alimentación:</h6><p>Inyección</p></div>
+                  <div class="detalles"><h6>Transmisión:</h6><p>5 velocidades</p></div>
+                </div>
+              </figure> 
+                <div class="card-body">
+                  <h5 class="card-title">Fz 150</h5>
+                  <p class="card-text año-km">2023 | 0km</p>
+                  <p class="card-text precio"> U$S 2.600</p>
+                </div>
+
+            </div>
+            <div class="card">
+              <figure>
+                <img src="./img/ninja 400.webp" class="card-img-top" alt="...">
+                  <div class="capa">
+                    <div class="detalles"><h6>Cilindrada:</h6><p>399 cc</p></div>
+                    <div class="detalles"><h6>Velocidad máxima:</h6><p>170 km/h</p></div>
+                    <div class="detalles"><h6>Alimentación:</h6><p>Inyección</p></div>
+                    <div class="detalles"><h6>Transmisión:</h6><p>6 velocidades</p></div>
+                  </div>
+              </figure>
+                <div class="card-body">
+                  <h5 class="card-title">Ninja 400</h5>
+                  <p class="card-text año-km">2023 | 0km</p>
+                  <p class="card-text precio"> U$S 13.350</p>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <section class="envio-todo-pais section3">
+      <div class="envio">
+        <h2>Envio a todo el pais</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium mollitia quisquam sit officia, deleniti, illum quasi non omnis modi, aperiam veritatis! Explicabo aliquam ipsum commodi alias eaque officiis earum deleniti?
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum eius dolorum labore. Hic, voluptas quidem cum beatae, non consequuntur tempore recusandae nisi nam repellat natus omnis amet aperiam odio corrupti!
+        </p>
+      </div>
+      <div class="cont-img">
+        <img src="./img/atras-envio.jpg" class="atras-icono" alt="">
+        <img class="icono-argentina" src="./img/envio.png" alt="" >
+      </div> 
+    </section>
+
+    <section id="tienda" class="e-commerce">
+      <img src="./img/fondo-e.jpg" class="fondo-e" alt="">
+      <div class="cont-nav">
+        <img class="e-logo" src="./img/logo-arom.png" alt="">
+        <nav class="nav-tienda">
+          <ul class="e-menu">
+            <li><button id="todas" class="e-marcas active">todas</button></li>
+            <li><button id="kawasaki" class="e-marcas">Kawasaki</button></li>
+            <li><button id="honda" class="e-marcas">Honda</button></li>
+            <li><button id="yamaha" class="e-marcas">Yamaha</button></li>
+            <li><button id="ktm"class="e-marcas">KTM</button></li>
+            <li><button id="suzuki" class="e-marcas">Suzuki</button></li> 
+            <li><button id="gilera" class="e-marcas">Gilera</button></li>
+          </ul>
+        </nav>
+        
+      </div>
+      
+      <div class="contenedor-fondo">
+        <h2 class="e-titulo">-</h2>
+        <div id="contenedor-productos" class="cont-productos">
+          <!-----aqui van los productos de javascript------>          </div> 
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <script src="index.js"></script>
+</body>
+</html> 
