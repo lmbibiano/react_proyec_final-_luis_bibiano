@@ -1,0 +1,81 @@
+/* Logo */
+.logo {
+  width: 100%;
+  padding: .5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #ff6464aa);
+}
+
+/* Barra de navegación */
+.barra-nave {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(49, 49, 49, 0.438);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.5s ease; /* Transición para cambiar el color de fondo */
+}
+
+.barra-nave.transparente {
+  background: rgba(49, 49, 49, 0); /* Fondo transparente cuando se hace scroll */
+  backdrop-filter: none;
+}
+
+.link-logo {
+  width: 10%;
+}
+
+.cat-nave {
+  width: 10%;
+  
+  color: aliceblue;
+  text-shadow: 1px 1px 1px black;
+  border-radius: 5%;
+  padding: 10%;
+  transition: text-shadow 0.3s ease;
+}
+
+.cat-nave:hover {
+  color: aliceblue;
+  text-shadow: 1px 1px 15px aliceblue;
+
+}
+
+.lista-nave {
+  width: 40vw;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.flechita {
+  font-size: 0.6rem;
+}
+
+.cart-widget {
+width: 5vw;
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+background-color: rgba(49, 49, 49, 0.438);
+  border-radius: 20%;
+  
+}
+.cantidad-productos {
+  text-decoration: none;
+  color: aliceblue;
+  
+}

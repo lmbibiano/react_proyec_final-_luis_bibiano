@@ -1,0 +1,23 @@
+.carrito {
+    margin-top: 10%;
+    width: 100vw;
+}
+.lista{
+    width: 100%;
+
+}
+.producto {
+    background-color: rgba(0, 0, 0, 0.753);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1%;
+}
+.imagen {
+    width: 20vw;
+}
+.total-abajo {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+}

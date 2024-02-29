@@ -1,0 +1,8 @@
+.item-count {
+    background-color: rgba(102, 102, 102, 0.774);
+    border-radius: 5%;
+}
+.controles {
+    display: flex;
+    justify-content: space-between;
+}

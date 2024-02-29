@@ -1,0 +1,45 @@
+.ItemDetail {
+    width: 90vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr 1fr;
+    padding-top: 5%;
+}
+
+.ficha {
+    background-color: rgba(66, 66, 66, 0.582);
+    width: 60vw;
+}
+.parte-izquierda {
+    text-align: center;
+    width: 40vw;
+}
+
+.detalles {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.img-detail {
+    width: 100%;
+}
+.barra-precio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 40vw;
+}
+.terminar-compra {
+    background-color: rgba(66, 66, 66, 0.842);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 60vw;
+}
+.tarjetas-img {
+    width: 25%;
+    height: 25%;
+}
