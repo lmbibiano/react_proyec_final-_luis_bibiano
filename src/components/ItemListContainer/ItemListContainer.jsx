@@ -1,31 +1,41 @@
 import React, { useEffect, useState } from 'react';
-import obtenerProductos from '../../utilidades/data';
 import ItemList from '../ItemList/ItemList';
 import '../ItemListContainer/ItemListContainer.css';
 import { useParams } from 'react-router-dom';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../../firebase/config';
 
-
-const ItemListContainer = ({ producto }) => {
+const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
+  const [titulo, setTitulo] = useState("todos los productos");
   const { category } = useParams();
 
   useEffect(() => {
+    const obtenerProductos = async () => {
+      const productosRef = collection(db, "productos");
+      let q;
+  
+      if (category) {
+        q = query(productosRef, where("categoria.nombreid", "==", category));
+        setTitulo(category)
+      } else {
+        q = productosRef;
+        setTitulo("todos los productos");
 
-    const productosRef = collection(db, "productos");
-    const q = category ? query(productosRef, where("categoria", "==", category )) : productosRef;
-    getDocs(q)
-      .then((resp) => {
-        setProductos(
-          resp.docs.map((doc) => {
-            return { ...doc.data(), id: doc.id }
-          })
-          )
-      })
 
+      }
+  
+      const querySnapshot = await getDocs(q);
+      const data = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+      setProductos([]);
+      setTimeout(() => { // Esperar un breve momento antes de cargar los nuevos productos
+        setProductos(data);
+
+      }, 100);
+    };
+  
+    obtenerProductos();
   }, [category]);
-
   return (
     <div className="item-list-container">
       <div>
@@ -37,9 +47,9 @@ const ItemListContainer = ({ producto }) => {
           <img className='logo1' src="../public/logo-arom.png" alt="" />
         </section>
       </div>
-      <h2>Todos los productos</h2>
+      <h2>{titulo}</h2>
       {productos.length > 0 ? (
-        <ItemList productos={productos} />
+        <ItemList productos={productos} titulo={titulo} />
       ) : (
         <p>No hay productos disponibles.</p>
       )}
@@ -48,3 +58,4 @@ const ItemListContainer = ({ producto }) => {
 };
 
 export default ItemListContainer;
+

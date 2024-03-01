@@ -17,7 +17,7 @@ const ItemDetail = ({ producto }) => {
   return (
     <div className="ItemDetail">
       <div className="parte-izquierda">
-        <img className="img-detail" src={producto.imagen} alt={producto.titulo} />
+      <img className="img-detail" src= {"/" + producto.imagen} alt={producto.titulo} />
         <h2>{producto.titulo}</h2>
       </div>
       <div className="ficha" dangerouslySetInnerHTML={{ __html: producto.ficha }} />

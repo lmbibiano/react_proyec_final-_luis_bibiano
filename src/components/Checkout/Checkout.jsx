@@ -1,11 +1,9 @@
-import { useContext, useState } from "react";
-
-import FormularioCheckout from "./FormularioCheckout";
+import React, { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import { collection, addDoc } from "firebase/firestore";
-import db from "../../db/db";
+import { db } from '../../firebase/config';
 import { Link } from "react-router-dom";
-
+import FormularioCheckout from './FormularioCheckout'; // Importa correctamente el componente
 import "./Checkout.css";
 
 const Checkout = () => {
@@ -15,7 +13,7 @@ const Checkout = () => {
     email: "",
     repetirEmail: ""
   });
-  const { carrito, precioTotal } = useContext(CartContext);
+  const { carrito, precioTotal} = useContext(CartContext);
   const [idOrden, setIdOrden] = useState(null);
 
   const guardarDatosInput = (event) => {
@@ -24,7 +22,7 @@ const Checkout = () => {
 
   const enviarOrden = (event) => {
     event.preventDefault();
-    //le damos formato a la orden
+    
     const orden = {
       comprador: { ...datosForm },
       productos: [...carrito],
@@ -33,24 +31,25 @@ const Checkout = () => {
       total: precioTotal(),
     };
 
-    //comparamos que los email sean iguales
+    
     if(datosForm.email !== datosForm.repetirEmail){
       alert("Los campos de email deben ser iguales")
       return
     }
 
-    //subimos la orden a firebase
+    
     const ordenesRef = collection(db, "ordenes");
     addDoc(ordenesRef, orden)
       .then((respuesta) => {
-        //borramos los datos de los inputs
+        
         setDatosForm({
           nombre: "",
           telefono: "",
           email: "",
+          repetirEmail: ""
         });
 
-        //guardamos el id de la orden en una variable de estado
+        
         setIdOrden(respuesta.id);
       })
       .catch((error) => console.log(error));
@@ -68,7 +67,6 @@ const Checkout = () => {
         </div>
       ) : (
         <FormularioCheckout
-          datosForm={datosForm}
           guardarDatosInput={guardarDatosInput}
           enviarOrden={enviarOrden}
         />
